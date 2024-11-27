@@ -1,0 +1,213 @@
+/* Full-page Background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img/bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Section Styling for Left Alignment */
+section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #FFA500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #002a5c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 70px;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #002a5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+/* Quote Form */
+.quote-form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: left;
+    width: 90%;
+    max-width: 600px;
+}
+
+.quote-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.quote-form input, .quote-form select, .quote-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#service-card {
+    width: 90%;
+    max-width: 300px;
+    transition: transform 0.2s;
+}
+
+#service-card:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+#service-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Items Flexbox Alignment */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item a {
+    color: #002a5c;
+    text-decoration: none;
+    font-size: 16px;
+}
+.contact-item a:hover {
+    transform: scale(1.05);
+    color:#FFA500;
+}
+/* Footer */
+footer {
+    background-color: #004080;
+    color: #ffd700;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .services-container {
+        gap: 10px;
+    }
+
+    #service-card {
+        width: 100%;
+    }
+
+    .quote-form {
+        width: 95%;
+    }
+
+    .contact-item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #service-card {
+        max-width: 100%;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+}
