@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Associates</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Prime Associates Logo" id="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><button type="button" class="btn-bd-primary"><a href="#home">Home</a></button></li>
+                <li><button type="button" class="btn-bd-primary"><a href="#services">Services</a></button></li>
+                <li><button type="button" class="btn-bd-primary"><a href="#contact">Contact</a></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Prime Associates</h1>
+        <p>Your one-stop shop for all your printing needs.</p>
+        <button onclick="document.getElementById('quote-form').style.display='block'">Get a Quote</button>
+    </section>
+
+    <section id="quote-form" class="quote-form" style="display:none;">
+        <h2>Get a Quote</h2>
+        <form id="quoteForm">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" required>
+
+            <label for="business-name">Business Name:</label>
+            <input type="text" id="business-name" name="business-name" required>
+
+            <label>Select Services:</label>
+            <table id="service-options-table">
+                <tr>
+                    <td><input type="checkbox" id="digital-offset-printing" name="services[]" value="Digital and Offset Printing"></td>
+                    <td><label for="digital-offset-printing">Digital and Offset Printing</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="photocopying" name="services[]" value="Photocopying (B/W and Colour)"></td>
+                    <td><label for="photocopying">Photocopying (B/W and Colour)</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="stationery-printing" name="services[]" value="Office Stationery Printing"></td>
+                    <td><label for="stationery-printing">Office Stationery Printing</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="corporate-gifting" name="services[]" value="Custom Corporate Gifting Solutions"></td>
+                    <td><label for="corporate-gifting">Custom Corporate Gifting Solutions</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="large-format-printing" name="services[]" value="Large Format Printing"></td>
+                    <td><label for="large-format-printing">Large Format Printing</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="identity-visiting-cards" name="services[]" value="Photo Identity Cards and Visiting Cards"></td>
+                    <td><label for="identity-visiting-cards">Photo Identity Cards and Visiting Cards</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="custom-printing" name="services[]" value="Mug, Bottle, T-Shirt, and Cap Printing"></td>
+                    <td><label for="custom-printing">Mug, Bottle, T-Shirt, and Cap Printing</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="lamination" name="services[]" value="Lamination (Cold and Hot)"></td>
+                    <td><label for="lamination">Lamination (Cold and Hot)</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="binding" name="services[]" value="Spiral, Hard, or Project Binding"></td>
+                    <td><label for="binding">Spiral, Hard, or Project Binding</label></td>
+                </tr>
+            </table>
+
+
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="services">
+        <h2><center>Our Services</center></h2>
+        <div class="services-container">
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/dig_n_off.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Digital And Offset Printing</h5>
+                  <p class="card-text">High-quality printing for small to large volumes, suitable for marketing materials, brochures, and books.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/pc.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Photocopying (B/W and Colour)</h5>
+                  <p class="card-text">Quick and affordable duplication of documents in black-and-white or vibrant color.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/stat.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Office Stationery Printing</h5>
+                  <p class="card-text">Customized printing for letterheads, envelopes, and other professional office essentials.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/Mug.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Custom Corporate Gifting Solutions</h5>
+                  <p class="card-text">Personalized gifts like calendars, diaries, and branded merchandise for businesses.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/lar.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Large Format Printing</h5>
+                  <p class="card-text">Prints for banners, posters, and signage in vibrant, high-resolution quality.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/vcard.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Photo Identity Cards and Visiting Cards</h5>
+                  <p class="card-text">Professional ID cards and business cards with sleek designs and durable finishes.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/Ts.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mug, Bottle, T-Shirt, and Cap Printing</h5>
+                  <p class="card-text">Customizable merchandise for gifts, promotions, or branding.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/lam.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Lamination (Cold and Hot)</h5>
+                  <p class="card-text">Protective film coating for documents and photos, enhancing durability and appearance.</p>
+                </div>
+            </div>
+            <div id="service-card" class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <img src="img/bin.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Spiral, Hard, or Project Binding</h5>
+                  <p class="card-text">Binding solutions for documents, reports, and projects in various formats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Get in touch with us:</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+919845063655">+91 9845063655</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:prime.a9b@gmail.com">prime.a9b@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://shorturl.at/GtpLE">
+                    No.873, Dar-ul-Noor,<br>
+                    14th B Cross Road, Opp. Brahma Kumaris,<br>
+                    Indiranagar 2nd Stage,<br>
+                    Bengaluru, Karnataka, 560008
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Prime Associates</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
