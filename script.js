@@ -1,10 +1,8 @@
-// Initialize EmailJS with your user ID (from your EmailJS dashboard)
 emailjs.init("CK0367y7ejTxamtfo");
 
 document.getElementById("quoteForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); 
 
-    // Collect selected services
     const selectedServices = Array.from(document.querySelectorAll('input[name="services[]"]:checked'))
                                   .map(service => service.value);
 
@@ -13,7 +11,7 @@ document.getElementById("quoteForm").addEventListener("submit", function(event) 
         email: document.getElementById("email").value,
         contactNumber: document.getElementById("contact-number").value,
         businessName: document.getElementById("business-name").value,
-        services: selectedServices.join(", "), // Join selected services as a comma-separated string
+        services: selectedServices.join(", "),
         message: document.getElementById("message").value,
     };
 
